@@ -29,6 +29,7 @@ source bootstrap.sh
 source bootstrap_hypervisor.sh
 
 # Setup default user
+log "--- Start: add user $USER_TO_ADD"
 if id "$USER_TO_ADD" >/dev/null 2>&1; then
   log "$USER_TO_ADD already exist!"
 else
@@ -37,6 +38,7 @@ else
 
   source _user.sh $USER_TO_ADD $USER_PASSWD
 fi
+log "--- End: add user $USER_TO_ADD"
 
 # Setup default load balancer with Nginx
 source bootstrap_nginx.sh
