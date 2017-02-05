@@ -7,9 +7,8 @@ if [[ "$IS_ROOT" == "" ]]; then
   exit 126
 fi
 
-# add user sovanna with already encryped password
-USER_TO_ADD="sovanna"
-USER_PASSWD="VjoQ5CRjsFvAY"
+USER_TO_ADD=${1:-chimera}
+USER_PASSWD=${2:-eLBkXr4IDea5E}
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
